@@ -4,7 +4,7 @@ import "./Weather.css";
 
 
 
-export default function Weather() {
+export default function Weather(props) {
     const [weatherData, setWeatherData] = useState ({ready : false});
     function handleResponse(response) {
         console.log(response.data);
@@ -35,7 +35,7 @@ export default function Weather() {
                </div>
                </div>
             </form>
-               <h1>{weatherData.city}</h1>
+               <h1>{props.defaultCity}</h1>
                <ul>
                    <li>
                        {weatherData.date}
@@ -75,8 +75,7 @@ export default function Weather() {
 
     } else {
     const apiKey ="0239330ab540e803o5b4f9t7e63fbef4";
-    let city = "Barcelona";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
     
     return "Loading..."
