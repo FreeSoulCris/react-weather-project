@@ -39,9 +39,7 @@
     align-items: center;
 }
 
-.Weather img {
-    height: 64px; 
-    width: 64px; 
+.Weather canvas{
     margin-right: 10px;
 
 }
