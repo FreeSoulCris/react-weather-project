@@ -13,7 +13,11 @@
 }
     
 
+.Weather  form .btn{
+    background-color: palevioletred;
+    border-color: #878787;
 
+}
 
 .Weather h1{
     color: #878787;
@@ -60,4 +64,13 @@
     top: -32px;
     line-height: 1;
 
+}
+
+.WeatherTemperature a{
+    text-decoration: none;
+    color:palevioletred
+}
+
+.App footer a{
+    color: palevioletred;
 }
